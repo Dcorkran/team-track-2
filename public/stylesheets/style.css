@@ -37,6 +37,11 @@ a {
   background-position: 9em 4.25em;
 }
 
+.one-score-container{
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
 .hvr-shadow {
   /*display: inline-block;*/
   vertical-align: middle;

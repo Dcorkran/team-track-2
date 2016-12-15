@@ -71,7 +71,7 @@ exports.seed = function(knex, Promise) {
     .then(function(){
       const score = [{
         id:1,
-        game_name:'SpikeBall',
+        game_name:'Spikeball',
         team1_score:21,
         team2_score:15,
         winner_id:1,
@@ -80,7 +80,7 @@ exports.seed = function(knex, Promise) {
         team2_id:2
       },{
         id:2,
-        game_name:'SpikeBall',
+        game_name:'Spikeball',
         team1_score:21,
         team2_score:10,
         winner_id:1,
@@ -89,7 +89,7 @@ exports.seed = function(knex, Promise) {
         team2_id:2
       },{
         id:3,
-        game_name:'CanJam',
+        game_name:'Kan Jam',
         team1_score:15,
         team2_score:21,
         winner_id:2,
