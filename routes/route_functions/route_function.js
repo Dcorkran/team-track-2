@@ -1,5 +1,5 @@
 const moment = require('moment');
-const knex = require('../db/knex');
+
 
 function changeDate(arrOfObjects){
   arrOfObjects.forEach((obj)=>{

@@ -8,38 +8,62 @@ a {
 }
 
 .main-select{
-  height: 17em;
+  height: 12em;
   /*width: 20em;*/
 
 }
 
-.select1{
-  background: url('../images/leaderboard-icon.png') no-repeat;
-  background-size: 15em;
-  background-position: 7.5em 3.25em;
-}
-
-.select2{
-  background: url('../images/leaderboard-icon-search.png') no-repeat;
-  background-size: 13.75em;
-  background-position: 7.5em 3.5em;
-}
-
-.select3{
-  background: url('../images/teamwork.png') no-repeat;
-  background-size: 13em;
-  background-position: 9em 4.25em;
-}
-
-.select4{
-  background: url('../images/question-icon.png') no-repeat;
-  background-size: 13em;
-  background-position: 9em 4.25em;
-}
-
 .one-score-container{
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  opacity: .95;
+  border-radius: 2%;
+}
+
+.brand-logo{
+  padding-left: 1em !important;
+}
+
+#nav-mobile{
+  padding-right: 1em;
+}
+
+#opacity-header{
+  opacity: .95;
+}
+
+#index-main{
+  padding-top: 2em;
+}
+
+#no-margin{
+  margin-bottom: 0em;
+}
+
+
+.index-icons{
+  max-width:80%;
+  max-height:80%;
+}
+
+#post-container{
+  height: 25em;
+  padding: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 30em;
+}
+
+.hero-background{
+  background-image: url('../images/volleymain.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.opacity-div{
+  opacity: .95;
 }
 
 .hvr-shadow {

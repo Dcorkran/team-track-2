@@ -1,0 +1,50 @@
+<div id="post-container"class="container blue-grey lighten-5">
+<form class="" action="/post_score" method="post">
+    <div class="row">
+        <div class="input-field col s5">
+            <select required name="team_1_name">
+                <option value="" disabled>Choose your option</option>
+                {{#each teams}}
+                <option value= {{id}}>{{team_name}}</option>
+                {{/each}}
+            </select>
+            <label>Team 1</label>
+        </div>
+        <div class="input-field col s5 offset-s2">
+            <select required name="team_2_name">
+                <option value="" disabled>Choose your option</option>
+                  {{#each teams}}
+                    <option value= {{id}}>{{team_name}}</option>
+                  {{/each}}
+            </select>
+            <label>Team2</label>
+        </div>
+    </div>
+    <div class="row">
+          <div class="input-field col s4">
+            <input id="team-1-score" type="number" length="2" name="team_1_score"required>
+            <label for="team-1-score">Team 1 Score</label>
+          </div>
+          <div class="input-field col s4 offset-s4">
+            <input id="team-2-score" type="number" length="2" name="team_2_score"required>
+            <label for="team-2-score">Team 2 Score</label>
+          </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s5">
+        <input id="game-name" type="text" name="game_name"required>
+        <label for="game-name">Game Name</label>
+      </div>
+      <div class="input-field col s5 offset-s2">
+        <input id="date" type="date" name="game_date"required>
+        <label for="date"></label>
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn waves-effect waves-light col s4 offset-s4" type="submit">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+</form>
+</div>
+<script src="/javascripts/post_score.js" charset="utf-8"></script>

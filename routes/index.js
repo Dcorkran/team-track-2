@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const knex = require('../db/knex');
-const routeFunctions = require('../route_functions/route_function')
+const routeFunctions = require('./route_functions/route_function')
+const scoreQueries = require('../db/scores');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,10 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/scores', function(req, res, next) {
-  knex('score')
-      .select('score.id','score.game_name','score.team1_score','score.team2_score','score.game_date','team.team_name','team2.team_name AS team2_name')
-      .innerJoin('team','score.team1_id','team.id')
-      .innerJoin('team AS team2','score.team2_id', 'team2.id')
+  scoreQueries.allScores()
       .then((allScores)=>{
         allScores = routeFunctions.changeDate(allScores);
         res.render('scores', {
@@ -23,17 +21,28 @@ router.get('/scores', function(req, res, next) {
 });
 
 router.get('/score/:id',function(req,res,next){
-  knex('score')
-    .select('score.id','score.game_name','score.team1_score','score.team2_score','score.game_date','team.team_name','team2.team_name AS team2_name')
-    .innerJoin('team','score.team1_id','team.id')
-    .innerJoin('team AS team2','score.team2_id', 'team2.id')
-    .where('score.id',req.params.id)
+  scoreQueries.oneScore(req.params.id)
     .then((oneScore)=>{
       res.render('score',{
         title:'Team Track',
         scores: oneScore
       });
     });
+});
+
+router.put('/score/:id',function(req,res,next){
+  scoreQueries.updateOneScore(req.params.id,req.body.score1,req.body.score2)
+  .then(function(data){
+    console.log(data);
+    res.json('updated');
+  });
+});
+
+router.delete('/score/:id', function(req,res,next){
+  scoreQueries.deleteOne(req.params.id)
+  .then(function(){
+    res.send('deleted');
+  });
 });
 
 

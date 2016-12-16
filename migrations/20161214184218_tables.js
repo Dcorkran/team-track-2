@@ -38,7 +38,7 @@ exports.down = function(knex, Promise) {
   return Promise.all([
     knex.schema.dropTable('score'),
     knex.schema.dropTable('player_team'),
-    knex.schema.dropTable('player'),
-    knex.schema.dropTable('team')
+    knex.schema.dropTable('team'),
+    knex.schema.dropTable('player')
   ]);
 };

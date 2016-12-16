@@ -1,4 +1,4 @@
-<div class="container one-score-container">
+<div class="container one-score-container  blue-grey lighten-5">
 {{#each scores}}
 <div class="row">
   <div class="col s10 offset-s1">
@@ -48,16 +48,16 @@
   </div>
 </div>
 <div id="buttons"class="row">
-  <div class="col s4">
+  <div class="col s3 offset-s1">
     <a id="delete-button"class="waves-effect waves-light btn col s10 offset-s1 red">Delete</a>
   </div>
-  <div class="col s4">
+  <div id="confirm-button"class="col s3 offset-s1">
       <!-- <a id="submit-button"class="waves-effect waves-light btn col s4 pull-s4">Edit</a> -->
   </div>
-  <div class="col s4">
+  <div class="col s3">
     <a id="edit-button"class="waves-effect waves-light btn col s10 offset-s1">Edit</a>
   </div>
 </div>
 {{/each}}
 </div>
-<script src="/javascripts/see-one-score.js" charset="utf-8"></script>
+<script src="/javascripts/score.js" charset="utf-8"></script>
